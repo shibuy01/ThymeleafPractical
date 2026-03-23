@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -48,6 +49,10 @@ public class HomeController {
 	
 	@GetMapping("/service")
 	public String serviceHandler(Model m) {
+		
+		m.addAttribute("title", "I Like to Love");
+		m.addAttribute("subtitle", LocalDateTime.now().toString());
+		
 		return"service";
 	}
 }

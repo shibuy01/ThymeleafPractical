@@ -17,7 +17,7 @@
 		</footer>  -->
 		
 		<!-- INSERT -->
-		<footer th:insert="footer::footer1">
+		<footer th:replace="~{footer::footer1(${title},${subtitle})}">
 			
 		</footer>
 </body>
