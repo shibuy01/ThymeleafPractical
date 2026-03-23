@@ -55,4 +55,9 @@ public class HomeController {
 		
 		return"service";
 	}
+	
+	@GetMapping("/newAbout")
+	public String newAbout() {
+		return"newabout";
+	}
 }
