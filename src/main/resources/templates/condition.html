@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Conditional Statement</h3>
+
+<h3>Use is <span th:style="${isActive} ? 'color:green' : 'color:red' "
+			th:text="${isActive} ? 'Active' : 'Not Active' "></span></h3>
+			
+	<h3 th:if="${gender}=='M' ">Male</h3>
+	<h3 th:unless="${gender}=='M' ">Female</h3>
+	
+	<div th:switch="${#lists.size(mylist)}">
+	    <h2 th:case="0">List Contain 0 Element</h2>
+	    <h2 th:case="1">List Contain 1 Element</h2>
+	    <h2 th:case="2">List Contain 2 Element</h2>
+	    <h2 th:case="3">List Contain 3 Element</h2>
+	    <h2 th:case="4">List Contain 4 Element</h2>
+	    <h2 th:case="*">List Contain More Than 4 Elements</h2>
+	</div>
+</body>
+</html>
